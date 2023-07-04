@@ -36,7 +36,7 @@ input::placeholder{
 .Add-student-container button{
     margin-top: 30px;
     padding: 10px;
-    width: 530px;
+    /* width: 530px; */
     border: none;
     outline: none;
 }

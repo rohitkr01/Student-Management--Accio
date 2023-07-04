@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/favicon.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Student Management</title>
 </head>
@@ -12,15 +12,16 @@
     <h1>Student Management CRUD</h1>
 
     <div class="Add-student-container">
-        <form >
-            <input type="text" id="name" name="name" placeholder="Name" >
+        <form onsubmit="event.preventDefault(); addStudent();">
+            <input type="text" id="name" name="name" placeholder="Name" required>
             <input type="email" id="email" name="email" placeholder="Email" >
             <input type="text" id="gpa" name="gpa" placeholder="GPA" >
             <input type="number" id="age" name="age" placeholder="Age">
             <input type="text" id="degree" name="degree" placeholder="Degree" >
-            
+            <br>
+            <button type="submit">Add Student</button>
         </form>
-        <button type="submit" onclick="addStudent()">Add Student</button>
+        <!-- <button type="submit" onclick="addStudent()">Add Student</button> -->
     </div>
     
     <div class="search-feild">

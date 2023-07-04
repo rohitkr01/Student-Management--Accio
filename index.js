@@ -4,7 +4,7 @@ let students = [];
 
 // Function to add a student
 function addStudent() {
-    // Get the input field values
+    
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const gpa = document.getElementById("gpa").value;
@@ -14,7 +14,6 @@ function addStudent() {
     // Create a new student object
     const student = { name, email , gpa , age, degree };
 
-    // Add the student to the array
     students.push(student);
 
     // Clear the form fields
@@ -24,19 +23,18 @@ function addStudent() {
     document.getElementById("age").value = "";
     document.getElementById("degree").value = "";
 
-    // Display the updated student list
+    
     displayStudents();
 }
 
 // ---------------------------
 function displayStudents() {
-    // Get the table element
+
     const tableBody = document.getElementById("table_body");
 
-    // Clear the existing list
+    
     tableBody.innerHTML = "";
 
-    // Loop through the students array and create list items
     students.forEach((student, index) => {
     const table_row = document.createElement("tr");
 
@@ -63,38 +61,32 @@ function displayStudents() {
 
 // Function to edit a student
 function editStudent(index) {
-    // Get the student object at the specified index
+
     const student = students[index];
 
-    // Set the form fields with student data for editing
+   
     document.getElementById("name").value = student.name;
     document.getElementById("email").value = student.email;
     document.getElementById("gpa").value = student.gpa;
     document.getElementById("age").value = student.age;
     document.getElementById("degree").value = student.degree;
 
-    // Remove the student from the array
     students.splice(index, 1);
 
-    // Display the updated student list
     displayStudents();
 }
 
 // Function to delete a student
 function deleteStudent(index) {
-    // Remove the student from the array
     students.splice(index, 1);
-
-    // Display the updated student list
     displayStudents();
 }
 // -----------------------------------
 // Function to search students
 function searchStudents() {
-    // Get the search query
+
     const query = document.getElementById("search_student").value.toLowerCase();
 
-    // Filter the students based on the search query
     const filteredStudents = students.filter(student => {
     const name = student.name.toLowerCase();
     const email = student.email.toLowerCase();
@@ -109,13 +101,12 @@ function searchStudents() {
 
 // function to display the filtered student data
 function displayFilteredStudents(filteredStudents) {
-    // Get the table element
+
     const tableBody = document.getElementById("table_body");
 
     // Clear the existing list
     tableBody.innerHTML = "";
 
-    // Loop through the students array and create list items
     filteredStudents.forEach((student, index) => {
     const table_row = document.createElement("tr");
 
