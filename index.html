@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Management</title>
+</head>
+<body>
+    <h1>Student Management CRUD</h1>
+
+    <div class="Add-student-container">
+        <form >
+            <input type="text" id="name" name="name" placeholder="Name" >
+            <input type="email" id="email" name="email" placeholder="Email" >
+            <input type="text" id="gpa" name="gpa" placeholder="GPA" >
+            <input type="number" id="age" name="age" placeholder="Age">
+            <input type="text" id="degree" name="degree" placeholder="Degree" >
+            
+        </form>
+        <button type="submit" onclick="addStudent()">Add Student</button>
+    </div>
+    
+    <div class="search-feild">
+        <input type="text" id="search_student"  oninput="searchStudents()"  placeholder="Search By Name, email or degree">
+    </div>
+
+    <div class="result-table">
+        <table border="1">
+            <thead>
+                <td class="std_id">Id</td>
+                <td class="std_name">Student Name</td>
+                <td class="std_email">Email</t>
+                <td class="std_age">Age</td>
+                <td class="std_gpa">GPA</td>
+                <td class="std_degree">Degree</td>
+            </thead>
+            <tbody id="table_body">
+                
+                <!-- <tr>
+                    <td class="std_id" >1</td>
+                    <td class="std_name">Rohit Kumar</td>
+                    <td class="std_email">rohit09619@gmail.com</td>
+                    <td class="std_age">21</td>
+                    <td class="std_gpa">9.2</td>
+                    <td class="std_degree">
+                        B.Tech - CSE
+                       <span class="crud_container">
+                            <img src="./assets/edit.png" alt="">
+
+                           <img src="./assets/trash.png" alt="">
+                        </span>
+                    </td>
+                </tr> -->
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./index.js">  </script>
+</body>
+</html>

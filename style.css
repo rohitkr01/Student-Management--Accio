@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto&display=swap');
+
+
+
+body{
+    padding: 10px 20px;
+    color: white;
+    background-color: #1E1E1E;
+    /* border: 1px solid white; */
+
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+form{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 10px ;
+    grid-row-gap: 10px ;
+    
+}
+
+form input, .search-feild input{
+    color: white;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border: 1px solid #FFFFFF;
+    outline: none;
+}
+
+input::placeholder{
+    color: white;
+}
+
+.Add-student-container button{
+    margin-top: 30px;
+    padding: 10px;
+    width: 530px;
+    border: none;
+    outline: none;
+}
+
+.Add-student-container button:hover{
+    background-color: rgb(209, 205, 205);
+}
+
+.search-feild , .result-table{
+    margin-top: 50px;
+}
+
+.search-feild input{
+    width: calc(100% - 20px);
+}
+
+.result-table{
+    min-height: 38.5vh;
+    border: 1px solid white;
+}
+
+.result-table table{
+    width: 100%;
+    /* width: calc(100% - 20px); */
+    border: 1px solid white;
+    border-collapse: collapse;
+
+}
+
+.result-table table td{
+    padding: 10px;
+}
+
+.std_id{
+    width: 20px;
+    text-align: center;
+}
+
+.std_degree{
+    width: 270px;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    align-items: center;
+    align-content: center;
+}
+
+.crud_container{
+    float: right;
+}
+
+.crud_container img{
+    width: 15px;
+    padding: 0 10px;
+}
